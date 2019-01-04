@@ -11,7 +11,7 @@ import (
 var rootCLI = &cobra.Command{
 	Use:   "cli-go",
 	Short: "Go CLI Application",
-	Long:  "A Simple Go CLI Application",
+	Long:  "Go CLI Application",
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 	},
@@ -21,7 +21,7 @@ var rootCLI = &cobra.Command{
 func init() {
 	// Add Child for CLI Root Command
 	rootCLI.AddCommand(versionCLI)
-	rootCLI.AddCommand(workdirCLI)
+	rootCLI.AddCommand(pwdCLI)
 }
 
 // Execute Function for CLI Root
