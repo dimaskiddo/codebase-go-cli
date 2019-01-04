@@ -21,13 +21,18 @@ var rootCLI = &cobra.Command{
 func init() {
 	// Add Child for CLI Root Command
 	rootCLI.AddCommand(versionCLI)
+	rootCLI.AddCommand(workdirCLI)
 }
 
 // Execute Function for CLI Root
 func Execute() {
 	err := rootCLI.Execute()
 	if err != nil {
+		fmt.Println("Error When Executing Command!")
+		fmt.Println("-------------------------------------")
+		fmt.Println("Error Details:")
 		fmt.Println(err)
+
 		os.Exit(1)
 	}
 }
