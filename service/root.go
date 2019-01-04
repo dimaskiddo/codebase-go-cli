@@ -17,8 +17,14 @@ var rootCLI = &cobra.Command{
 	},
 }
 
-// ExecRoot Function to Execute CLI Root
-func ExecRoot() {
+// Init Function for Service
+func init() {
+	// Add Child for CLI Root Command
+	rootCLI.AddCommand(versionCLI)
+}
+
+// Execute Function for CLI Root
+func Execute() {
 	err := rootCLI.Execute()
 	if err != nil {
 		fmt.Println(err)

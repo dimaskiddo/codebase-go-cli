@@ -15,8 +15,3 @@ var versionCLI = &cobra.Command{
 		fmt.Println("Go CLI Version 1.0")
 	},
 }
-
-func init() {
-	// Add CLI Version as Child of CLI Root Command
-	rootCLI.AddCommand(versionCLI)
-}
