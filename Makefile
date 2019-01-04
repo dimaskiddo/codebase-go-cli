@@ -1,4 +1,4 @@
-GO_OUTPUT ?= main
+GO_OUTPUT ?= cli-go
 GO_EXPOSE_PORT ?= 3000
 
 git-push:

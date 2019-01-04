@@ -8,10 +8,13 @@ import (
 )
 
 // CLI Root Variable Structure
-var rootCLI = &cobra.command{
-	Use:   "Your Command",
-	Short: "Command Short Description",
-	Long:  "Command Full Description",
+var rootCLI = &cobra.Command{
+	Use:   "cli-go",
+	Short: "Go CLI Application",
+	Long:  "A Simple Go CLI Application",
+	Run: func(cmd *cobra.Command, args []string) {
+		cmd.Help()
+	},
 }
 
 // ExecRoot Function to Execute CLI Root
