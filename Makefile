@@ -39,7 +39,7 @@ rebase:
 	rm -rf .git
 	find . -type f -iname "*.go*" -exec sed -i '' -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" {} \;
 	git init
-	git remote add origin https://$(REBASE_URL)
+	git remote add origin https://$(REBASE_URL).git
 
 push:
 	git push origin master
