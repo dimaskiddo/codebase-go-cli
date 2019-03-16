@@ -10,8 +10,8 @@ import (
 // Pwd Variable Structure
 var Pwd = &cobra.Command{
 	Use:   "pwd",
-	Short: "Show current working directory",
-	Long:  "Show current working directory",
+	Short: "Print current working directory",
+	Long:  "Print Current Working Directory",
 	Run: func(cmd *cobra.Command, args []string) {
 		pwd, err := os.Getwd()
 		if err != nil {
