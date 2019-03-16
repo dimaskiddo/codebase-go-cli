@@ -39,8 +39,6 @@ rebase:
 	rm -rf .git
 	sed -i -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" *.go
 	sed -i -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" controller/*.go
-	sed -i -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" model/*.go
-	sed -i -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" service/*.go
 
 push:
 	git push origin master
