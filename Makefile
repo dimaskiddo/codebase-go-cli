@@ -37,8 +37,7 @@ commit:
 
 rebase:
 	rm -rf .git
-	sed -i -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" *.go
-	sed -i -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" controller/*.go
+	find . -type f -iname "*.go*" -exec sed -i '' -e "s%github.com/dimaskiddo/codebase-go-cli%$(REBASE_URL)%g" {} \;
 
 push:
 	git push origin master

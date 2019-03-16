@@ -1,6 +1,6 @@
-# Codebase for Command-Line Interface (CLI) in Go
+# Codebase for Command-Line Interface (CLI) Application in Go
 
-This codebase help a new Go developer in developing a Command-Line Interface (CLI) using Go.
+This codebase help a new Go developer in developing a Command-Line Interface (CLI) Application using Go.
 
 ## Getting Started
 
