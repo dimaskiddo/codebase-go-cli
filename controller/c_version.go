@@ -6,11 +6,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// CLI Version Variable Structure
-var versionCLI = &cobra.Command{
+// Version Variable Structure
+var Version = &cobra.Command{
 	Use:   "version",
-	Short: "Get Current CLI Version",
-	Long:  "Get Current CLI Version",
+	Short: "Show application version info",
+	Long:  "Show application version info",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Go CLI Version 1.0")
 	},

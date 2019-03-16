@@ -7,15 +7,15 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// CLI Working Directory Variable Structure
-var pwdCLI = &cobra.Command{
+// Pwd Variable Structure
+var Pwd = &cobra.Command{
 	Use:   "pwd",
-	Short: "Get Current Working Directory",
-	Long:  "Get Current Working Directory",
+	Short: "Show current working directory",
+	Long:  "Show current working directory",
 	Run: func(cmd *cobra.Command, args []string) {
 		pwd, err := os.Getwd()
 		if err != nil {
-			fmt.Println("Error to Get Current Working Directory!")
+			fmt.Println(err.Error())
 			os.Exit(1)
 		}
 
