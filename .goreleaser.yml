@@ -1,24 +1,27 @@
 before:
- hooks:
-  - make ensure
+  hooks:
+    - make ensure
 builds:
 - env:
-  - CGO_ENABLED=0
-- goos:
-  - darwin
-  - linux
-  - windows
-archive:
-  replacements:
-    darwin: Darwin
-    linux: Linux
-    windows: Windows
-    386: i386
-    amd64: x86_64
+    - CGO_ENABLED=0
+  goos:
+    - darwin
+    - linux
+    - windows
+  goarch:
+    - 386
+    - amd64
+archives:
+- replacements:
+    darwin: macos
+    linux: linux
+    windows: windows
+    386: 32-bit
+    amd64: 64-bit
 checksum:
-  name_template: 'checksums.txt'
+  name_template: '{{ .ProjectName }}_{{ .Version }}-checksums.txt'
 snapshot:
-  name_template: "{{ .Tag }}-next"
+  name_template: "{{ .Version }}_{{ .ShortCommit }}"
 changelog:
   sort: asc
   filters:

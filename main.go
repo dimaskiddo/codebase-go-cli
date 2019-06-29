@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	ctl "github.com/dimaskiddo/codebase-go-cli/controller"
+	"github.com/dimaskiddo/codebase-go-cli/ctl"
 )
 
 // Root Variable Structure
