@@ -17,13 +17,13 @@ ensure:
 	make clean
 	dep ensure -v
 
-build:
+release:
 	make ensure
 	goreleaser --snapshot --skip-publish --rm-dist
 	make init-dist
 	echo "Build complete please check dist directory."
 
-release:
+publish:
 	GITHUB_TOKEN=$(GITHUB_TOKEN) gorelease --rm-dist
 	make init-dist
 
