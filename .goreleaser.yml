@@ -18,8 +18,9 @@ archives:
     windows: windows
     386: 32-bit
     amd64: 64-bit
+  format: zip
 checksum:
-  name_template: '{{ .ProjectName }}_{{ .Version }}-checksums.txt'
+  name_template: 'checksums.txt'
 snapshot:
   name_template: "{{ .Version }}_{{ .ShortCommit }}"
 changelog:
