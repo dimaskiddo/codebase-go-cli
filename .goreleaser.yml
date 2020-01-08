@@ -1,6 +1,6 @@
 before:
   hooks:
-    - make ensure
+    - make vendor
 builds:
 - env:
     - CGO_ENABLED=0
