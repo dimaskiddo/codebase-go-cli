@@ -1,4 +1,4 @@
-package hlp
+package log
 
 import (
 	"os"

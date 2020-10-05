@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/dimaskiddo/codebase-go-cli/ctl"
+	"github.com/dimaskiddo/codebase-go-cli/internal/cmd"
 )
 
 // Root Variable Structure
@@ -22,8 +22,8 @@ var r = &cobra.Command{
 // Init Function
 func init() {
 	// Add Child for Root Command
-	r.AddCommand(ctl.Version)
-	r.AddCommand(ctl.Pwd)
+	r.AddCommand(cmd.Version)
+	r.AddCommand(cmd.Pwd)
 }
 
 // Main Function
