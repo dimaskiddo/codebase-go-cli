@@ -28,7 +28,7 @@ publish:
 	echo "Publish complete please check your repository releases."
 
 run:
-	go run cmd/cli/main.go
+	go run cmd/main/main.go
 
 clean-dist:
 	rm -rf dist
