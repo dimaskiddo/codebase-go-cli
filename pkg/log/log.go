@@ -32,7 +32,7 @@ func init() {
 	logger.SetLevel(logrus.InfoLevel)
 }
 
-func LogPrintln(level logLevel, message interface{}) {
+func Println(level logLevel, message interface{}) {
 	if logger != nil {
 		switch level {
 		case "panic":
