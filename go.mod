@@ -1,8 +1,8 @@
 module github.com/dimaskiddo/codebase-go-cli
 
-go 1.12
+go 1.15
 
 require (
-	github.com/sirupsen/logrus v1.4.2
-	github.com/spf13/cobra v0.0.5
+	github.com/sirupsen/logrus v1.8.1
+	github.com/spf13/cobra v1.1.3
 )
